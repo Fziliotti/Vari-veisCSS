@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Variables Tutorial</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        :root {
+            --site-bg: #f1e9c5;
+            --bgdiv : darkblue;
+        }
+
+        *,*::after, *::before{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--site-bg);
+            text-align: center;
+            transition: all 0.2s;
+        }
+
+        div {
+            background: var(--bgdiv);
+            color:white;
+            padding: 2rem 0;
+        }
+
+        header{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80px;
+            color:white;
+            background-color: #323232;
+            margin-bottom: 3rem;
+        }
+
+        button{
+            margin-top: 1rem;
+            border:1px solid lightblue;
+            background-color: white;
+            padding: 1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor:pointer;
+        }
+    </style>
+</head>
+
+<body>
+   <header>
+    <h1>Variavéis CSS</h1>
+   </header>
+
+   <div>
+       Essa div terá o fundo darkblue.
+   </div>
+
+   <button onclick="alterarVariavel()">
+       Mudar o background
+   </button>
+   
+
+</body>
+
+<script>
+
+        var body = document.querySelector('body');
+        
+    
+        function alterarVariavel (){
+            body.style.setProperty("--site-bg", "#ffcc00");
+            body.style.setProperty("--bgdiv", "blue");
+            myVar = getComputedStyle(body).getPropertyValue("--site-bg");
+            console.log(myVar);
+        }
+       
+    </script>
+</html>
