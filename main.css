@@ -1,0 +1,63 @@
+:root {
+    --site-bg: #f1e9c5;
+    --bgdiv: darkblue;
+    --fontColor: white;
+}
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--site-bg);
+    text-align: center;
+    transition: all 0.2s;
+}
+
+div {
+    background: var(--bgdiv);
+    color: var(--fontColor);
+    padding: 2rem 0;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    color: white;
+    background-color: gray;
+    margin-bottom: 3rem;
+}
+
+button {
+    margin-top: 1rem;
+    border: 1px solid lightblue;
+    background-color: lightgrey;
+    padding: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+
+.containerBox {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 1rem;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(80px, auto);
+    grid-gap: 1rem;
+}
+
+.boxTeste {
+    height: 100px;
+    background-color: #fff;
+}
